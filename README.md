@@ -12,8 +12,8 @@ Application has support for:
 
 ---
 ####Requirements
-- NodeJS (tested on 0.12.7)
-- Generated GitHub AccessToken (https://github.com/settings/tokens)
+- [NodeJS](https://nodejs.org) (tested on 0.12.7)
+- Generated [GitHub AccessToken](https://github.com/settings/tokens)
 - Exported BitBucket Issues to **json** file format (https://bitbucket.org/:owner/:repo/admin/issues/import-export)
 
 ---
