@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bitbucket-to-GitHub-issues-importer by qarles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Bitbucket-to-GitHub-issues-importer</h1>
+      <h2 class="project-tagline">Import issues from BitBucket to GitHub</h2>
+      <a href="https://github.com/qarles/bitbucket-to-github-issues-importer" class="btn">View on GitHub</a>
+      <a href="https://github.com/qarles/bitbucket-to-github-issues-importer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/qarles/bitbucket-to-github-issues-importer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="bitbucket-to-github-issues-importer" class="anchor" href="#bitbucket-to-github-issues-importer" aria-hidden="true"><span class="octicon octicon-link"></span></a>BitBucket to GitHub Issues Importer</h2>
+
+<hr>
+
+<h4>
+<a id="basic-informations" class="anchor" href="#basic-informations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Informations:</h4>
+
+<p>This is <strong>node.js</strong> application which imports <strong><em>bitbucket exported issues</em></strong> to <strong><em>GitHub Issues</em></strong>.</p>
+
+<p>Application has support for:</p>
+
+<ul>
+<li>issues</li>
+<li>labels</li>
+<li>milestones</li>
+<li>comments</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h4>
+
+<ul>
+<li>
+<a href="https://nodejs.org">NodeJS</a> (tested on 0.12.7)</li>
+<li>Generated <a href="https://github.com/settings/tokens">GitHub AccessToken</a>
+</li>
+<li>Exported BitBucket Issues to <strong>json</strong> file format (<a href="https://bitbucket.org/:owner/:repo/admin/issues/import-export">https://bitbucket.org/:owner/:repo/admin/issues/import-export</a>)</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h4>
+
+<h6>
+<a id="1-install-node-required-modules" class="anchor" href="#1-install-node-required-modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install node required modules</h6>
+
+<pre><code>npm install
+</code></pre>
+
+<h6>
+<a id="2-run-importer" class="anchor" href="#2-run-importer" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Run importer</h6>
+
+<pre><code>node import.js -f {file} --owner {owner} --repo {repo} --token {token} -{items}
+</code></pre>
+
+<ul>
+<li>file =&gt; path to exported from bitbucket file with issues data</li>
+<li>owner =&gt; name of GitHub account</li>
+<li>repo =&gt; name of GitHub repository</li>
+<li>items =&gt; items to import, which can be:
+
+<ul>
+<li>i =&gt; issues</li>
+<li>l =&gt; labels</li>
+<li>c =&gt; comments</li>
+<li>m =&gt; milestones</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples:</h4>
+
+<h6>
+<a id="import-issues-comments-labels-and-milestones" class="anchor" href="#import-issues-comments-labels-and-milestones" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import issues, comments, labels and milestones:</h6>
+
+<pre><code>node import -f test.json --owner test --repo test_repo --token 123 -iclm
+</code></pre>
+
+<h6>
+<a id="import-issues-only" class="anchor" href="#import-issues-only" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import issues only:</h6>
+
+<pre><code>node import -f test.json --owner test --repo test_repo --token 123 -i
+</code></pre>
+
+<h6>
+<a id="import-issues-and-comments" class="anchor" href="#import-issues-and-comments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import issues and comments:</h6>
+
+<pre><code>node import -f test.json --owner test --repo test_repo --token 123 -ic
+</code></pre>
+
+<h6>
+<a id="import-milestones-and-labels" class="anchor" href="#import-milestones-and-labels" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import milestones and labels:</h6>
+
+<pre><code>node import -f test.json --owner test --repo test_repo --token 123 -ml
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/qarles/bitbucket-to-github-issues-importer">Bitbucket-to-GitHub-issues-importer</a> is maintained by <a href="https://github.com/qarles">qarles</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
