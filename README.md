@@ -1,7 +1,7 @@
 ##BitBucket to GitHub Issues Importer
 ---
 ####Basic Informations:
-This is **node.js** application which imports ***bitbucket exported issues*** to ***GitHub Issues***.
+This is **node.js** application which allows You to import **BitBucket** issues to **GitHub**.
 
 Application has support for:
 
