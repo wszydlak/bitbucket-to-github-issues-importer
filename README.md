@@ -1,6 +1,6 @@
-##[BitBucket to GitHub Issues Importer](http://qarles.github.io/bitbucket-to-github-issues-importer/)
+## [BitBucket to GitHub Issues Importer](http://qarles.github.io/bitbucket-to-github-issues-importer/)
 ---
-####Basic Informations:
+#### Basic Informations:
 This is **node.js** application which allows You to import **BitBucket** issues to **GitHub**.
 
 Application has support for:
@@ -11,19 +11,19 @@ Application has support for:
 - comments
 
 ---
-####Requirements
+#### Requirements
 - [NodeJS](https://nodejs.org) (tested on 0.12.7)
 - Generated [GitHub AccessToken](https://github.com/settings/tokens)
 - Exported BitBucket Issues to **json** file format (https://bitbucket.org/:owner/:repo/admin/issues/import-export)
 
 ---
-####Usage:
-######1. Install node required modules
+#### Usage:
+###### 1. Install node required modules
 ```
 npm install
 ```
 
-######2. Run importer
+###### 2. Run importer
 ```
 node import.js -f {file} --owner {owner} --repo {repo} --token {token} -{items}
 ```
@@ -38,24 +38,24 @@ node import.js -f {file} --owner {owner} --repo {repo} --token {token} -{items}
     - m => milestones
   
 ---
-####Examples:
+#### Examples:
 
-######Import issues, comments, labels and milestones:
+###### Import issues, comments, labels and milestones:
 ```
 node import -f test.json --owner test --repo test_repo --token 123 -iclm
 ```
 
-######Import issues only:
+###### Import issues only:
 ```
 node import -f test.json --owner test --repo test_repo --token 123 -i
 ```
 
-######Import issues and comments:
+###### Import issues and comments:
 ```
 node import -f test.json --owner test --repo test_repo --token 123 -ic
 ```
 
-######Import milestones and labels:
+###### Import milestones and labels:
 ```
 node import -f test.json --owner test --repo test_repo --token 123 -ml
 ```
